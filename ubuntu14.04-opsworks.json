@@ -1,7 +1,7 @@
 {
     "builders": [
         {
-            "vm_name": "ubuntu1404-opsworks",
+            "vm_name": "ubuntu-trusty64-opsworks",
             "type": "virtualbox-iso",
             "guest_os_type": "Ubuntu_64",
             "http_directory": "preseed",
@@ -35,7 +35,7 @@
             ]
         },
         {
-            "vm_name": "ubuntu1404-opsworks",
+            "vm_name": "ubuntu-trusty64-opsworks",
             "type": "vmware-iso",
             "guest_os_type": "ubuntu-64",
             "boot_wait": "10s",
@@ -99,6 +99,6 @@
     ],
     "post-processors": [{
         "type": "vagrant",
-        "output": "{{.Provider}}/ubuntu1404-opsworks.box"
+        "output": "{{.Provider}}/ubuntu-trusty64-opsworks.box"
     }]
 }

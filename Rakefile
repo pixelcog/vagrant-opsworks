@@ -4,8 +4,8 @@ namespace 'precise' do
     end
 
     task 'virtualbox-install' do
-        system 'vagrant box remove ubuntu1204-opsworks --provider virtualbox'
-        system 'vagrant box add ubuntu1204-opsworks virtualbox/ubuntu1204-opsworks.box'
+        system 'vagrant box remove ubuntu-precise64-opsworks --provider virtualbox'
+        system 'vagrant box add ubuntu-precise64-opsworks virtualbox/ubuntu-precise64-opsworks.box'
     end
 
     task 'vmware-build' => 'precise:clean' do
@@ -13,12 +13,12 @@ namespace 'precise' do
     end
 
     task 'vmware-install' do
-        system 'vagrant box remove ubuntu1204-opsworks --provider vmware_desktop'
-        system 'vagrant box add ubuntu1204-opsworks vmware/ubuntu1204-opsworks.box'
+        system 'vagrant box remove ubuntu-precise64-opsworks --provider vmware_desktop'
+        system 'vagrant box add ubuntu-precise64-opsworks vmware/ubuntu-precise64-opsworks.box'
     end
 
     task 'clean' do
-        system 'rm -f virtualbox/ubuntu1204-opsworks.box vmware/ubuntu1204-opsworks.box'
+        system 'rm -f virtualbox/ubuntu-precise64-opsworks.box vmware/ubuntu-precise64-opsworks.box'
     end
 end
 
@@ -28,8 +28,8 @@ namespace 'trusty' do
     end
 
     task 'virtualbox-install' do
-        system 'vagrant box remove ubuntu1404-opsworks --provider virtualbox'
-        system 'vagrant box add ubuntu1404-opsworks virtualbox/ubuntu1404-opsworks.box'
+        system 'vagrant box remove ubuntu-trusty64-opsworks --provider virtualbox'
+        system 'vagrant box add ubuntu-trusty64-opsworks virtualbox/ubuntu-trusty64-opsworks.box'
     end
 
     task 'vmware-build' => 'trusty:clean' do
@@ -37,12 +37,12 @@ namespace 'trusty' do
     end
 
     task 'vmware-install' do
-        system 'vagrant box remove ubuntu1404-opsworks --provider vmware_desktop'
-        system 'vagrant box add ubuntu1404-opsworks vmware/ubuntu1404-opsworks.box'
+        system 'vagrant box remove ubuntu-trusty64-opsworks --provider vmware_desktop'
+        system 'vagrant box add ubuntu-trusty64-opsworks vmware/ubuntu-trusty64-opsworks.box'
     end
 
     task 'clean' do
-        system 'rm -f virtualbox/ubuntu1404-opsworks.box vmware/ubuntu1404-opsworks.box'
+        system 'rm -f virtualbox/ubuntu-trusty64-opsworks.box vmware/ubuntu-trusty64-opsworks.box'
     end
 end
 
